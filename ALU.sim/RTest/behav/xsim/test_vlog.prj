@@ -1,0 +1,22 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../ALU.srcs/sources_1/new/AdditionModule.v" \
+"../../../../ALU.srcs/sources_1/new/AndModule.v" \
+"../../../../ALU.srcs/sources_1/new/OrModule.v" \
+"../../../../ALU.srcs/sources_1/new/DesicionModule.v" \
+"../../../../ALU.srcs/sources_1/new/InstructionMem.v" \
+"../../../../ALU.srcs/sources_1/new/Register.v" \
+"../../../../ALU.srcs/sources_1/new/ProgramCounter.v" \
+
+sv xil_defaultlib  \
+"../../../../../testbench.sv" \
+"../../../../../design.sv" \
+
+verilog xil_defaultlib  \
+"../../../../ALU.srcs/RTest/new/RTest.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

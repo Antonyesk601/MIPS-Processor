@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../ALU.srcs/sources_1/new/InstructionMem.v" \
+"../../../../ALU.srcs/sources_1/new/ProgramCounter.v" \
+
+sv xil_defaultlib  \
+"../../../../ALU.srcs/sources_1/imports/Verilog/testbench.sv" \
+"../../../../ALU.srcs/sources_1/imports/Verilog/design.sv" \
+
+verilog xil_defaultlib  \
+"../../../../ALU.srcs/InstructionMem/new/IMTest.v" \
+"../../../../ALU.srcs/ProgramCounter/imports/new/ProgramCounter.v" \
+"../../../../ALU.srcs/ProgramCounter/new/PCTestt.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

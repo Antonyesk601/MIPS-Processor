@@ -1,0 +1,58 @@
+// Code your design here
+
+
+module REGISTERFILE(clk,WE,S1,S2,S3,WD,RD1,RD2);
+
+input clk,WE;
+input [4:0] S1,S2,S3;
+input [31:0] WD;
+output reg [31:0] RD1,RD2;
+reg [31:0] register_memory [0:31]; 
+
+
+initial begin
+	    register_memory[0] = 32'b00000000000000000000000000000001; 
+	    register_memory[1] = 32'b00000000000000000000000000000010; 
+        register_memory[2] = 32'b00000000000000000000000000000011; 
+        register_memory[3] = 32'b00000000000000000000000000000100; 
+        register_memory[4] = 32'b00000000000000000000000000000101; 
+        register_memory[5] = 32'b00000000000000000000000000000110; 
+        register_memory[6] = 32'b00000000000000000000000000000111; 
+        register_memory[7] = 32'b00000000000000000000000000001000;
+        register_memory[8] = 32'b00000000000000000000000000001001; 
+        register_memory[9] = 32'b00000000000000000000000000001010;  
+        register_memory[10] = 32'b00000000000000000000000000001011;
+        register_memory[11] = 32'b00000000000000000000000000001100; 
+        register_memory[12] = 32'b00000000000000000000000000001100; 
+        register_memory[13] = 32'b00000000000000000000000000001101; 
+        register_memory[14] = 32'b00000000000000000000000000001111; 
+        register_memory[15] = 32'b00000000000000000000000000010000;  
+        register_memory[16] = 32'b00000000000000000000000000010001;  
+        register_memory[17] = 32'b00000000000000000000000000010010; 
+        register_memory[18] = 32'b00000000000000000000000000010011;
+        register_memory[19] = 32'b00000000000000000000000000010100;
+        register_memory[20] = 32'b00000000000000000000000000010101;
+        register_memory[21] = 32'b00000000000000000000000000010110;
+        register_memory[22] = 32'b00000000000000000000000000010111;
+        register_memory[23] = 32'b00000000000000000000000000011000;
+        register_memory[24] = 32'b00000000000000000000000000011001;
+        register_memory[25] = 32'b00000000000000000000000000011010;
+        register_memory[26] = 32'b00000000000000000000000000011011; 
+        register_memory[27] = 32'b00000000000000000000000000011100; 
+        register_memory[28] = 32'b00000000000000000000000000011101;
+        register_memory[29] = 32'b00000000000000000000000000011111; 
+        register_memory[30] = 32'b00000000000000000000000000100000;
+        register_memory[31] = 32'b00000000000000000000000000100001;
+	end
+
+
+always @(posedge clk) 
+    begin
+        if(WE)
+        register_memory[S3]=WD; 
+        else begin
+         RD2<=register_memory[S2];
+         RD1<=register_memory[S1];
+        end
+    end
+endmodule

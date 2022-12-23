@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/ProgramCounter/imports/new/ProgramCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProgramCounter
+INFO: [VRFC 10-311] analyzing module PCtest
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/ProgramCounter/new/PCTestt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCtest
+WARNING: [VRFC 10-2845] overwriting previous definition of module PCtest [D:/Verilog/ALU/ALU.srcs/ProgramCounter/new/PCTestt.v:1]

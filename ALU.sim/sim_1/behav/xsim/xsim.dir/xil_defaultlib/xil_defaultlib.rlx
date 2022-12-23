@@ -1,0 +1,15 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+D:/Verilog/ALU/ALU.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/InstructionMem/new/IMTest.v,1671560209,verilog,,D:/Verilog/ALU/ALU.srcs/sim_1/imports/new/Main.v,,IMTest,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sim_1/imports/new/Main.v,1671550513,verilog,,,,main,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/imports/Verilog/design.sv,1671551185,systemVerilog,,,,REGISTERFILE,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/imports/Verilog/testbench.sv,1671560646,systemVerilog,,D:/Verilog/ALU/ALU.srcs/sources_1/imports/Verilog/design.sv,,Register_TB,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/new/AdditionModule.v,1669219222,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/new/AndModule.v,,AdditionModule,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/new/AndModule.v,1669216151,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/new/OrModule.v,,AndModule,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/new/DesicionModule.v,1669220192,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/new/Register.v,,ALU,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/new/InstructionMem.v,1671559584,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/new/ProgramCounter.v,,InstructionMem,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/new/OrModule.v,1669216156,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/new/DesicionModule.v,,OrModule,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/new/ProgramCounter.v,1671559743,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/new/Main.v,,PCtest;ProgramCounter,,,,,,,,
