@@ -22,38 +22,39 @@
 
 module MIPS_Processor(
         input wire clk,
-        inout wire[31:0] CurrentInstructionAddress,
-        wire[31:0] IncomingInstructionAddress,
-        wire[31:0] CurrentInstructionAddressPlus4,
-        wire[31:0] JumpAddress,
-        wire[31:0] BranchAddress,
-        
-        //Instruction
-        wire[31:0] CurrentInstruction,
-        
-        //DataBuses
-        wire[31:0] WriteDataReg,
-        wire[31:0] ReadData1,
-        wire[31:0] ReadData2,
-        wire[31:0] ReadData2Reg,
-        wire[31:0] ReadData2Imm,
-        wire[31:0] ALUOutput,
-        wire[31:0] MemoryReadData,
-        
-        wire[4:0] WriteRegisterTarget,
-        
-        //ControlSignals
-        wire RegisterDestination,
-        wire Jump,
-        wire Branch,
-        wire ReadFromMemory,
-        wire MemoryToRegister,
-        wire[1:0] ALUOp,
-        wire WriteToMemory,
-        wire ALUOperand2Source,
-        wire WriteToReg,
-        wire BranchConditionMet,
-        wire[3:0] ALUOPCODE
+        inout
+            wire[31:0] CurrentInstructionAddress,
+            wire[31:0] IncomingInstructionAddress,
+            wire[31:0] CurrentInstructionAddressPlus4,
+            wire[31:0] JumpAddress,
+            wire[31:0] BranchAddress,
+            
+            //Instruction
+            wire[31:0] CurrentInstruction,
+            
+            //DataBuses
+            wire[31:0] WriteDataReg,
+            wire[31:0] ReadData1,
+            wire[31:0] ReadData2,
+            wire[31:0] ReadData2Reg,
+            wire[31:0] ReadData2Imm,
+            wire[31:0] ALUOutput,
+            wire[31:0] MemoryReadData,
+            
+            wire[4:0] WriteRegisterTarget,
+            
+            //ControlSignals
+            wire RegisterDestination,
+            wire Jump,
+            wire Branch,
+            wire ReadFromMemory,
+            wire MemoryToRegister,
+            wire[1:0] ALUOp,
+            wire WriteToMemory,
+            wire ALUOperand2Source,
+            wire WriteToReg,
+            wire BranchConditionMet,
+            wire[3:0] ALUOPCODE
         );
    
     
@@ -129,14 +130,13 @@ module MIPS_Processor(
         .Result(ALUOutput),
         .Cout(),
         .Overflow(),
-        .ZFlag());
+        .ZFlag(BranchConditionMet));
         
     assign JumpAddress = {CurrentInstructionAddress[31:28],{2'b00,CurrentInstruction[25:0]}<<2};
     assign WriteRegisterTarget = RegisterDestination?CurrentInstruction[15:11]:CurrentInstruction[20:16];
     assign WriteDataReg = MemoryToRegister?MemoryReadData:ALUOutput;
     assign ReadData2 = ALUOperand2Source?ReadData2Imm:ReadData2Reg;
-    assign BranchConditionMet = 0;
-    assign IncomingInstructionAddress = Jump? JumpAddress: (Branch&&BranchConditionMet)?BranchAddress:CurrentInstructionAddressPlus4;
+    assign IncomingInstructionAddress = Jump? JumpAddress: (Branch&&(BranchConditionMet^CurrentInstruction[26]))?BranchAddress:CurrentInstructionAddressPlus4;
     
     
     

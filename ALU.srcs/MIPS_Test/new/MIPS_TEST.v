@@ -34,6 +34,7 @@ module MIPS_Test();
     wire BranchConditionMet;
     wire[3:0] ALUOPCODE;
     
+    
     MIPS_Processor processor(clk,
         CurrentInstructionAddress,
         IncomingInstructionAddress,

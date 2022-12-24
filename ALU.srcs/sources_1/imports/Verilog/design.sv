@@ -3,9 +3,8 @@ module REGISTERFILE(clk,WE,S1,S2,S3,WD,RD1,RD2);
     input [4:0] S1,S2,S3;
     input [31:0] WD;
     output [31:0] RD1,RD2;
-    reg [31:0] register_memory [0:31]; 
-
-
+    reg [31:0] register_memory [0:31];
+    
     initial 
         begin
              register_memory[0]=32'b0;
