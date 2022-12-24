@@ -1,0 +1,30 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/sources_1/new/InstructionMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/sources_1/new/AdditionModule.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AdditionModule
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/sources_1/new/AndModule.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AndModule
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/sources_1/new/OrModule.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OrModule
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/sources_1/new/DesicionModule.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/sources_1/new/ProgramCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProgramCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/sources_1/imports/Verilog/testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/sources_1/imports/Verilog/design.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REGISTERFILE
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/InstructionMem/new/IMTest.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IMTest
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/sources_1/new/MIPS_Processor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_Processor
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/sources_1/new/SignExtender.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignExtender
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/sources_1/new/ALUControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/MIPS_Test/new/MIPS_TEST.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_Test

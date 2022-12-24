@@ -17,7 +17,6 @@ module REGISTERFILE(clk,WE,S1,S2,S3,WD,RD1,RD2);
 always @(posedge clk) 
     begin
         if(WE)
-            register_memory[S3]<=WD; 
-        
+            register_memory[S3]=WD;     
     end
 endmodule

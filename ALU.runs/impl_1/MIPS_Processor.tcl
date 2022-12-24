@@ -69,7 +69,6 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache C:/Users/Antony/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-2392-AntonyESK/incrSyn
   create_project -in_memory -part xc7vx485tffg1157-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0

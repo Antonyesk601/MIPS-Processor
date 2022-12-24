@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/Antony/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-2392-AntonyESK/incrSyn
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config -id {Synth 8-256} -limit 10000
@@ -33,10 +32,6 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/Verilog/ALU/ALU.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib -sv {
-  D:/Verilog/ALU/ALU.srcs/sources_1/imports/Verilog/testbench.sv
-  D:/Verilog/ALU/ALU.srcs/sources_1/imports/Verilog/design.sv
-}
 read_verilog -library xil_defaultlib {
   D:/Verilog/ALU/ALU.srcs/sources_1/new/InstructionMem.v
   D:/Verilog/ALU/ALU.srcs/sources_1/new/AdditionModule.v
@@ -44,6 +39,8 @@ read_verilog -library xil_defaultlib {
   D:/Verilog/ALU/ALU.srcs/sources_1/new/OrModule.v
   D:/Verilog/ALU/ALU.srcs/sources_1/new/DesicionModule.v
   D:/Verilog/ALU/ALU.srcs/sources_1/new/ProgramCounter.v
+  D:/Verilog/ALU/ALU.srcs/sources_1/imports/Verilog/testbench.sv
+  D:/Verilog/ALU/ALU.srcs/sources_1/imports/Verilog/design.sv
   D:/Verilog/ALU/ALU.srcs/InstructionMem/new/IMTest.v
   D:/Verilog/ALU/ALU.srcs/sources_1/new/MIPS_Processor.v
   D:/Verilog/ALU/ALU.srcs/sources_1/new/SignExtender.v
@@ -51,6 +48,8 @@ read_verilog -library xil_defaultlib {
   D:/Verilog/ALU/ALU.srcs/sources_1/new/DataMem.v
   D:/Verilog/ALU/ALU.srcs/sources_1/new/Control.v
 }
+set_property file_type Verilog [get_files D:/Verilog/ALU/ALU.srcs/sources_1/imports/Verilog/testbench.sv]
+set_property file_type Verilog [get_files D:/Verilog/ALU/ALU.srcs/sources_1/imports/Verilog/design.sv]
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
