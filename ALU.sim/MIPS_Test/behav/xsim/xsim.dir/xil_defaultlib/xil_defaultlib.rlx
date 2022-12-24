@@ -1,0 +1,20 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+D:/Verilog/ALU/ALU.sim/MIPS_Test/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/InstructionMem/new/IMTest.v,1671560209,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/new/MIPS_Processor.v,,IMTest,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/MIPS_Test/new/MIPS_TEST.v,1671837413,verilog,,,,MIPS_Test,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/imports/Verilog/design.sv,1671840556,verilog,,D:/Verilog/ALU/ALU.srcs/InstructionMem/new/IMTest.v,,REGISTERFILE,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/imports/Verilog/testbench.sv,1671560646,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/imports/Verilog/design.sv,,Register_TB,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/new/ALUControl.v,1671822380,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/new/DataMem.v,,ALUControl,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/new/AdditionModule.v,1669219222,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/new/AndModule.v,,AdditionModule,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/new/AndModule.v,1669216151,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/new/OrModule.v,,AndModule,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/new/Control.v,1671836401,verilog,,D:/Verilog/ALU/ALU.srcs/MIPS_Test/new/MIPS_TEST.v,,Control,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/new/DataMem.v,1671837163,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/new/Control.v,,DataMem,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/new/DesicionModule.v,1671821791,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/new/ProgramCounter.v,,ALU,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/new/InstructionMem.v,1671840459,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/new/AdditionModule.v,,InstructionMem,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/new/MIPS_Processor.v,1671839771,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/new/SignExtender.v,,MIPS_Processor,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/new/OrModule.v,1669216156,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/new/DesicionModule.v,,OrModule,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/new/ProgramCounter.v,1671834173,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/imports/Verilog/testbench.sv,,ProgramCounter,,,,,,,,
+D:/Verilog/ALU/ALU.srcs/sources_1/new/SignExtender.v,1671818994,verilog,,D:/Verilog/ALU/ALU.srcs/sources_1/new/ALUControl.v,,SignExtender,,,,,,,,

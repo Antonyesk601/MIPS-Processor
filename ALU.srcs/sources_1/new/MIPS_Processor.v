@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module MIPS_Processor(wire clk);
+module MIPS_Processor(input wire clk);
 
 
     //Addresses
@@ -42,7 +42,7 @@ module MIPS_Processor(wire clk);
     wire[31:0] ALUOutput;
     wire[31:0] MemoryReadData;
     
-    wire WriteRegisterTarget;
+    wire[4:0] WriteRegisterTarget;
     
     //ControlSignals
     wire RegisterDestination;
@@ -80,7 +80,7 @@ module MIPS_Processor(wire clk);
         .CurrentInstruction(CurrentInstructionAddress));
     
     InstructionMem IM
-        (.Address(CurrentInstructionAddress),
+        (.Address(CurrentInstructionAddress-32'h00400000),
         .Instruction(CurrentInstruction));
         
     DataMem data
@@ -116,7 +116,7 @@ module MIPS_Processor(wire clk);
         .OPCODE(4'b0010),
         .Operand1(CurrentInstructionAddressPlus4),
         .Operand2(ReadData2Imm<<2),
-        .Cin(0),
+        .Cin(1'b0),
         .Result(BranchAddress),
         .Cout(),
         .Overflow(),
@@ -125,7 +125,7 @@ module MIPS_Processor(wire clk);
         (.OPCODE(ALUOPCODE),
         .Operand1(ReadData1),
         .Operand2(ReadData2),
-        .Cin(0),
+        .Cin(1'b0),
         .Result(ALUOutput),
         .Cout(),
         .Overflow(),
@@ -134,11 +134,10 @@ module MIPS_Processor(wire clk);
     assign JumpAddress = {CurrentInstructionAddress[31:28],{2'b00,CurrentInstruction[25:0]}<<2};
     assign WriteRegisterTarget = RegisterDestination?CurrentInstruction[15:11]:CurrentInstruction[20:16];
     assign WriteDataReg = MemoryToRegister?MemoryReadData:ALUOutput;
-    assign ReadData2 = ALUOperand2Source?ReadData2Reg:ReadData2Imm;
+    assign ReadData2 = ALUOperand2Source?ReadData2Imm:ReadData2Reg;
     assign BranchConditionMet = 0;
     assign IncomingInstructionAddress = Jump? JumpAddress: (Branch&&BranchConditionMet)?BranchAddress:CurrentInstructionAddressPlus4;
-        
-        
+    
     
     
 endmodule

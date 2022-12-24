@@ -19,7 +19,7 @@
     <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
     <Option Name="BoardPart" Val=""/>
     <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
-    <Option Name="ActiveSimSet" Val="RTest"/>
+    <Option Name="ActiveSimSet" Val="MIPS_Test"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
@@ -32,7 +32,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="195"/>
+    <Option Name="WTXSimLaunchSim" Val="321"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -103,7 +103,7 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Verilog/testbench.sv">
-        <FileInfo>
+        <FileInfo SFType="Verilog">
           <Attr Name="ImportPath" Val="$PPRDIR/../testbench.sv"/>
           <Attr Name="ImportTime" Val="1671551040"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -112,7 +112,7 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Verilog/design.sv">
-        <FileInfo>
+        <FileInfo SFType="Verilog">
           <Attr Name="ImportPath" Val="$PPRDIR/../design.sv"/>
           <Attr Name="ImportTime" Val="1671551185"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -164,8 +164,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="ALU"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TopModule" Val="MIPS_Processor"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -261,6 +260,24 @@
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SrcSet" Val="sources_1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="MIPS_Test" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/MIPS_Test">
+      <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/MIPS_Test/new/MIPS_TEST.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="MIPS_Test"/>
+        <Option Name="TransportPathDelay" Val="0"/>
+        <Option Name="TransportIntDelay" Val="0"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="NLNetlistMode" Val="funcsim"/>
       </Config>
     </FileSet>
   </FileSets>

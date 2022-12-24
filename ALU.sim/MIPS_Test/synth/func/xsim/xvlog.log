@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.sim/MIPS_Test/synth/func/xsim/MIPS_Test_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_Processor
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Verilog/ALU/ALU.srcs/MIPS_Test/new/MIPS_TEST.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_Test

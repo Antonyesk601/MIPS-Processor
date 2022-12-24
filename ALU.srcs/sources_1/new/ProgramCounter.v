@@ -22,9 +22,14 @@
 module ProgramCounter(
     input [31:0] NextInstruction,
     input clk,
-    output [31:0] CurrentInstruction
+    output reg [31:0] CurrentInstruction
     );
-    assign CurrentInstruction =  NextInstruction;
+    initial 
+        begin
+            CurrentInstruction =32'h00400000 ;
+        end
+    always @(posedge clk)
+        CurrentInstruction =  NextInstruction;
     
 endmodule
 

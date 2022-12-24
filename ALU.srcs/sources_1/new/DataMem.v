@@ -25,6 +25,6 @@ module DataMem(
   input [31:0] WriteData,
   output [31:0] ReadData
   );
-  reg [7:0] mem [0: 2147483647];
+  reg [7:0] mem [0: 1024];
   assign ReadData = {mem[Address],mem[Address+1],mem[Address+2],mem[Address+3]};
 endmodule

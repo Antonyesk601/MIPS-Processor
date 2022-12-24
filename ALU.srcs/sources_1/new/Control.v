@@ -33,7 +33,8 @@ module Control(
     output WriteToReg
     );
     assign RegisterDestination = Instruction ==6'd0; 
-    assign Jump = (Instruction == 6'd2)||(Instruction == 6'd3);
+    assign Jump = (Instruction == 6'd2)
+                    ||(Instruction == 6'd3);
     assign Branch = (Instruction == 6'd4)
                         ||(Instruction == 6'd5)
                         ||(Instruction == 6'd6)
@@ -42,7 +43,7 @@ module Control(
                         ||(Instruction == 6'd21)
                         ||(Instruction == 6'd22)
                         ||(Instruction == 6'd23);
-    assign ReadFromMem = (Instruction == 6'd32)
+    assign ReadFromMemory = (Instruction == 6'd32)
                             ||(Instruction == 6'd33)
                             ||(Instruction == 6'd34)
                             ||(Instruction == 6'd35)
@@ -58,17 +59,35 @@ module Control(
                                    ||(Instruction == 6'd37)
                                    ||(Instruction == 6'd38)
                                    ||(Instruction == 6'd39);
-    assign ALUOp[0] = RegisterDestination;
-    assign ALUOp[1] = Branch;
+    assign ALUOp = {Instruction ==6'd0,(Instruction == 6'd4)
+                            ||(Instruction == 6'd5)
+                            ||(Instruction == 6'd6)
+                            ||(Instruction == 6'd7)
+                            ||(Instruction == 6'd20)
+                            ||(Instruction == 6'd21)
+                            ||(Instruction == 6'd22)
+                            ||(Instruction == 6'd23)};
     assign WriteToMemory =  (Instruction == 6'd40)
                                 || (Instruction == 6'd41)
                                 || (Instruction == 6'd42)
                                 || (Instruction == 6'd43)
                                 || (Instruction == 6'd46);
-    assign ALUOperand2Source = (!RegisterDestination)
+    assign ALUOperand2Source = (!Instruction ==6'd0)
                                     && (Instruction != 6'd4) 
                                     && (Instruction != 6'd5);
-    assign WriteToReg = (!WriteToMemory)
-                            &&(!Branch)
-                            &&(!Jump);
+    assign WriteToReg = (!( (Instruction == 6'd40)
+                               || (Instruction == 6'd41)
+                               || (Instruction == 6'd42)
+                               || (Instruction == 6'd43)
+                               || (Instruction == 6'd46)))
+                            &&(!(Instruction == 6'd4)
+                                   ||(Instruction == 6'd5)
+                                   ||(Instruction == 6'd6)
+                                   ||(Instruction == 6'd7)
+                                   ||(Instruction == 6'd20)
+                                   ||(Instruction == 6'd21)
+                                   ||(Instruction == 6'd22)
+                                   ||(Instruction == 6'd23))
+                            &&(!((Instruction == 6'd2)
+                                   ||(Instruction == 6'd3)));
 endmodule
